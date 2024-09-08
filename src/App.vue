@@ -1,8 +1,9 @@
 <script>
 import HeaderNav from './components/HeaderNav.vue';
+import FooterNav from './components/FooterNav.vue';
 export default {
   components: {
-    HeaderNav
+    HeaderNav, FooterNav
   }
 }
 </script>
@@ -16,24 +17,26 @@ export default {
       <HeaderNav/>    
 
     </div>
-    <h1 class="title">Stanavich Remodeling & Repairs</h1>
 
     <br/><br/>
 
 </div>
-<router-view/>
+<div class="router-view">
+  <router-view/>
 
-  
+</div>
+<br/>
+  <div class="footer">
+    <footer-nav/>
+  </div>
 </template>
 
 <style scoped>
-.title{
-  text-align: center;
-}
+
+
 .content {
   display: flex;
-  justify-content: center;
-  margin: 0 5% 0px 5%;
+  flex-direction: column; 
+  align-items: center;
 }
-
 </style>
