@@ -5,7 +5,7 @@ import InteriorView from '../views/InteriorView.vue'
 
 const routes = [
   {
-    path: '/stanavich-remodeling',
+    path: '/Stanavich-Remodeling',
     name: 'HomeView',
     component: HomeView
 },
