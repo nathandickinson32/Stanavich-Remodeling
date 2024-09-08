@@ -5,15 +5,17 @@
         <ul class="list">
           <li>
             <router-link class="home-btn" to="/stanavich-remodeling" @click="closeMenu">Home</router-link><br />
-            <router-link class="gallery-btn" to="/stanavich-remodeling/gallery" @click="closeMenu">Gallery</router-link><br />
-            <router-link class="interior-btn" to="/stanavich-remodeling/interior" @click="closeMenu">Interior</router-link>
+            <router-link class="gallery-btn" to="/stanavich-remodeling/about" @click="closeMenu">About</router-link><br />
+            <router-link class="interior-btn" to="/stanavich-remodeling/interior" @click="closeMenu">Interior</router-link><br />
+            <router-link class="gallery-btn" to="/stanavich-remodeling/exterior" @click="closeMenu">Exterior</router-link><br />
+            <router-link class="gallery-btn" to="/stanavich-remodeling/gallery" @click="closeMenu">Gallery</router-link>
+
           </li>
         </ul>
       </div>
-  
-     
+    
       <nav class="ham-menu-container">
-        <div class="ham-menu" @click="toggleMenu">
+        <div :class="['ham-menu', isMenuOpen ? 'active' : '']" @click="toggleMenu">
           <span></span>
           <span></span>
           <span></span>
@@ -50,6 +52,7 @@
     display: flex;
     align-items: center;
     z-index: 1000;
+    margin-left: 20px;
   }
   
   .ham-menu-container {
@@ -94,7 +97,7 @@
     background-color: black;
     border-radius: 25px;
     position: absolute;
-    transition: 0.7s ease;
+    transition: all 0.5s ease; 
   }
   
   .ham-menu span:nth-child(1) {
@@ -109,14 +112,18 @@
     top: 75%;
   }
   
-  .ham-menu.active span:nth-child(1),
-  .ham-menu.active span:nth-child(3) {
+  .ham-menu.active span:nth-child(1) {
     top: 50%;
-    transform: rotate(90deg);
+    transform: rotate(45deg); 
   }
   
   .ham-menu.active span:nth-child(2) {
     opacity: 0;
+  }
+  
+  .ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: rotate(-45deg); 
   }
   
   .list {
