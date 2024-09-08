@@ -78,7 +78,7 @@ button:focus-visible {
   }
 } */
 
-.content {
+/* .content {
   display: flex;
   justify-content: center;
   margin: 0 5% 20px 5%;
@@ -104,4 +104,4 @@ button:focus-visible {
   justify-content: space-between;
   box-shadow: -2px 2px 4px #a1af9f;
   box-sizing: border-box;
-}
+} */
