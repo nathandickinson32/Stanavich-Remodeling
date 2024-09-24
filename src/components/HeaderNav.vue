@@ -1,7 +1,6 @@
 <template>
   <header class="header">
     <div :class="['off-screen-menu', isMenuOpen ? 'active' : '']">
-      <label id="profile"></label>
       <ul class="list">
         <li>
           <router-link class="home-btn" to="/stanavich-remodeling" @click="closeMenu">Home</router-link><br />
