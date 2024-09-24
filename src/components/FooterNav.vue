@@ -50,7 +50,7 @@ export default {
 .heart-img {
   vertical-align: middle;
   position: relative;
-  top: -5px; /* Adjust this value to move the heart upwards */
+  top: -5px;
 }
 
 h1 {

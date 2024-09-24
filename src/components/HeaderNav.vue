@@ -51,9 +51,9 @@ export default {
   height: 60px; 
   display: flex;
   align-items: center;
-  justify-content: center; /* Center all items horizontally within the header */
-  padding: 0 20px; /* Padding for left and right */
-  background-color: #fff; /* Background color to cover content */
+  justify-content: center; 
+  padding: 0 20px; 
+  background-color: #fff;
   z-index: 1000;
 }
 
@@ -61,18 +61,18 @@ export default {
   display: flex;
   width: 100%;
   align-items: center;
-  justify-content: center; /* Center align title horizontally */
+  justify-content: center;
 }
 
 .ham-menu-container {
   position: absolute;
-  left: 20px; /* Adjust as needed */
+  left: 20px;
 }
 
 .title {
   text-align: center;
-  font-size: 24px; /* Adjust font size as needed */
-  flex: 1; /* Ensure the title container takes up remaining space */
+  font-size: 24px;
+  flex: 1; 
 }
 
 .off-screen-menu {
@@ -93,7 +93,7 @@ export default {
 }
 
 .off-screen-menu.active {
-  left: 0; /* Corrected to 'right' property */
+  left: 0; 
 }
 
 .ham-menu {
@@ -146,7 +146,7 @@ export default {
 @media only screen and (max-width: 420px) {
   .title {
  
-  font-size: 18px; /* Adjust font size as needed */
+  font-size: 18px;
 }
 }
 </style>
