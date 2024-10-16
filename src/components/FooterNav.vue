@@ -5,7 +5,7 @@
         /></a> -->
         <div>
           <span>
-            <h2>LET ME HELP YOU <img class="heart-img" src="../assets/Images/heart.png" alt="Heart"
+            <h2>LET ME HELP YOU <img class="heart-img" src="/assets/images/heart.png" alt="Heart"
               /> YOUR HOME </h2>
           </span>
           <span>
