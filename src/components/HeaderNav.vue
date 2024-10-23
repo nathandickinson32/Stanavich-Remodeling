@@ -3,11 +3,11 @@
     <div :class="['off-screen-menu', isMenuOpen ? 'active' : '']">
       <ul class="list">
         <li>
-          <router-link class="home-btn" to="/stanavich-remodeling" @click="closeMenu">Home</router-link><br />
-          <router-link class="gallery-btn" to="/stanavich-remodeling/about" @click="closeMenu">About</router-link><br />
-          <router-link class="interior-btn" to="/stanavich-remodeling/interior" @click="closeMenu">Interior</router-link><br />
-          <router-link class="gallery-btn" to="/stanavich-remodeling/exterior" @click="closeMenu">Exterior</router-link><br />
-          <router-link class="gallery-btn" to="/stanavich-remodeling/gallery" @click="closeMenu">Gallery</router-link>
+          <router-link class="home-btn" to="/Stanavich-Remodeling" @click="closeMenu">Home</router-link><br />
+          <router-link class="gallery-btn" to="/Stanavich-Remodeling/about" @click="closeMenu">About</router-link><br />
+          <router-link class="interior-btn" to="/Stanavich-Remodeling/interior" @click="closeMenu">Interior</router-link><br />
+          <router-link class="gallery-btn" to="/Stanavich-Remodeling/exterior" @click="closeMenu">Exterior</router-link><br />
+          <router-link class="gallery-btn" to="/Stanavich-Remodeling/gallery" @click="closeMenu">Gallery</router-link>
         </li>
       </ul>
     </div>
