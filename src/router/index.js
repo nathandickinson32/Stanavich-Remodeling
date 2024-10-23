@@ -7,7 +7,7 @@ import AboutView from '../views/AboutView.vue'
 
 const routes = [
   {
-    path: '/stanavich-remodeling',
+    path: '/',
     name: 'HomeView',
     component: HomeView
 },
