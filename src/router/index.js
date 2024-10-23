@@ -12,22 +12,22 @@ const routes = [
     component: HomeView
 },
 {
-  path: '/gallery',
+  path: '/Stanavich-Remodeling/gallery',
   name: 'GalleryView',
   component: GalleryView
 },
 {
-  path: '/about',
+  path: '/Stanavich-Remodeling/about',
   name: 'AboutView',
   component: AboutView
 },
 {
-  path: '/interior',
+  path: '/Stanavich-Remodeling/interior',
   name: 'InteriorView',
   component: InteriorView
 },
 {
-  path: '/exterior',
+  path: '/Stanavich-Remodeling/exterior',
   name: 'ExteriorView',
   component: ExteriorView
 },
