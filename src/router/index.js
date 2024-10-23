@@ -12,22 +12,22 @@ const routes = [
     component: HomeView
 },
 {
-  path: '/stanavich-remodeling/gallery',
+  path: '/gallery',
   name: 'GalleryView',
   component: GalleryView
 },
 {
-  path: '/stanavich-remodeling/about',
+  path: '/about',
   name: 'AboutView',
   component: AboutView
 },
 {
-  path: '/stanavich-remodeling/interior',
+  path: '/interior',
   name: 'InteriorView',
   component: InteriorView
 },
 {
-  path: '/stanavich-remodeling/exterior',
+  path: '/exterior',
   name: 'ExteriorView',
   component: ExteriorView
 },
