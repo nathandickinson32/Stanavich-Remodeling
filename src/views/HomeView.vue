@@ -1,30 +1,28 @@
 <template>
-  <div class="content1">
-    <h1>Homepage</h1>
+  <div class="homepage">
+   
+
     <div class="carousel-container">
       <transition name="fade">
         <img :src="randomImage1" class="carousel-image" :key="randomIndex1" />
       </transition>
     </div>
+
+    <section class="referrals">
+      <h2>What are others saying about me?</h2>
+      <div class="review-card" v-for="(review, index) in reviews" :key="index">
+        <h3>{{ review.name }}</h3>
+        <p class="location">{{ review.location }}</p>
+        <p class="review-text">{{ review.text }}</p>
+      </div>
+    </section>
+
+  
   </div>
 </template>
 
 <script>
 import remodel1 from "/assets/images/remodel1.jpg";
-import remodel2 from "/assets/images/remodel2.jpg";
-import remodel3 from "/assets/images/remodel3.jpg";
-import remodel4 from "/assets/images/remodel4.jpg";
-import remodel5 from "/assets/images/remodel5.jpg";
-import remodel6 from "/assets/images/remodel6.jpg";
-import remodel7 from "/assets/images/remodel7.jpg";
-import remodel8 from "/assets/images/remodel8.jpg";
-import remodel9 from "/assets/images/remodel9.jpg";
-import remodel10 from "/assets/images/remodel10.jpg";
-import remodel11 from "/assets/images/remodel11.jpg";
-import remodel12 from "/assets/images/remodel12.jpg";
-import remodel13 from "/assets/images/remodel13.jpg";
-import remodel15 from "/assets/images/remodel15.jpg";
-import remodel16 from "/assets/images/remodel16.jpg";
 
 export default {
   data() {
@@ -33,20 +31,12 @@ export default {
       intervalId: null,
       images: [
         remodel1,
-        remodel2,
-        remodel3,
-        remodel4,
-        remodel5,
-        remodel6,
-        remodel7,
-        remodel8,
-        remodel9,
-        remodel10,
-        remodel11,
-        remodel12,
-        remodel13,
-        remodel15,
-        remodel16,
+        // Add other images here
+      ],
+      reviews: [
+        { name: "John Doe", location: "New York, NY", text: "Great job!" },
+        { name: "Jane Smith", location: "Los Angeles, CA", text: "Highly recommended!" },
+        { name: "Alice Brown", location: "Chicago, IL", text: "Amazing service!" },
       ],
     };
   },
@@ -64,20 +54,18 @@ export default {
 </script>
 
 <style scoped>
-.content1 {
-  position: relative;
-  z-index: 10;
+.homepage {
   text-align: center;
-  padding-top: 30px;
+  color: white;
+  background-color: #1a1a1a;
 }
 
+
+
+/* Carousel styling */
 .carousel-container {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: calc(100vh - 60px);
-  z-index: -1;
+  height: 50vh;
   overflow: hidden;
 }
 
@@ -85,23 +73,36 @@ export default {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 1s;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
+/* Referrals styling */
+.referrals {
+  padding: 20px;
+  background-color: #222;
 }
 
-h1 {
-  position: relative;
-  z-index: 20;
-  color: white;
+.review-card {
+  margin: 10px auto;
+  padding: 15px;
+  background-color: #333;
+  border-radius: 5px;
+  width: 80%;
 }
+
+.review-card h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.review-card .location {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.review-card .review-text {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+
 </style>

@@ -13,6 +13,16 @@
             GIVE ME A CALL AT 330-720-8623
           </h2>
           </span>
+          <span>
+          <h6>
+            <span>
+              Website Creator:
+            <a href="https://nathandickinson32.github.io"
+          >Nathan Dickinson</a> 
+            </span>
+            
+          </h6>
+          </span>
    
   </div>
   </div>
