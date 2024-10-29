@@ -23,6 +23,22 @@
 
 <script>
 import remodel1 from "/assets/images/remodel1.jpg";
+import remodel2 from "/assets/images/remodel2.jpg";
+import remodel3 from "/assets/images/remodel3.jpg";
+import remodel4 from "/assets/images/remodel4.jpg";
+import remodel5 from "/assets/images/remodel5.jpg";
+import remodel6 from "/assets/images/remodel6.jpg";
+import remodel7 from "/assets/images/remodel7.jpg";
+import remodel8 from "/assets/images/remodel8.jpg";
+import remodel9 from "/assets/images/remodel9.jpg";
+import remodel10 from "/assets/images/remodel10.jpg";
+import remodel11 from "/assets/images/remodel11.jpg";
+import remodel12 from "/assets/images/remodel12.jpg";
+import remodel13 from "/assets/images/remodel13.jpg";
+import remodel14 from "/assets/images/remodel14.jpg";
+import remodel15 from "/assets/images/remodel15.jpg";
+import remodel16 from "/assets/images/remodel16.jpg";
+
 
 export default {
   data() {
@@ -31,7 +47,23 @@ export default {
       intervalId: null,
       images: [
         remodel1,
-        // Add other images here
+        remodel2,
+        remodel3,
+        remodel4,
+        remodel5,
+        remodel6,
+        remodel7,
+        remodel8,
+        remodel9,
+        remodel10,
+        remodel11,
+        remodel12,
+        remodel13,
+        remodel14,
+        remodel15,
+        remodel16,
+
+
       ],
       reviews: [
         { name: "John Doe", location: "New York, NY", text: "Great job!" },
@@ -62,7 +94,6 @@ export default {
 
 
 
-/* Carousel styling */
 .carousel-container {
   width: 100%;
   height: 50vh;
@@ -75,7 +106,6 @@ export default {
   object-fit: cover;
 }
 
-/* Referrals styling */
 .referrals {
   padding: 20px;
   background-color: #222;
