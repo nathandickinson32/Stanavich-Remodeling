@@ -1,17 +1,56 @@
 <template>
+<div>
+  <section class="content-section">
+    <h2>Interior Services</h2>
+    <p>Broad Description of interior services</p>
 
-  <div class="content">
-    <h1>Interior</h1>
+  </section>
 
-  </div>
+<section class="services-grid">
+  <service-item v-for="(item, index) in interiorServiceItems"
+  :key="index"
+  :backgroundImage="item.backgroundImage"
+  :description="item.description"
+  />
+</section>
+
+</div>
+  
 </template>
 
-<script>
-export default {
 
+<script>
+import ServiceItem from '../components/ServiceItem.vue';
+
+export default {
+name: `InteriorPage`,
+components: {
+  ServiceItem
+},
+data() {
+  return {
+    interiorServiceItems: [
+      { backgroundImage: `/assets/images/remodel1.jpg`, description: `Description 1`},
+      { backgroundImage: `/assets/images/remodel2.jpg`, description: `Description 2`},
+      { backgroundImage: `/assets/images/remodel3.jpg`, description: `Description 3`}
+
+    ]
+  }
+}
 }
 </script>
 
-<style>
+<style scoped>
+.content-section {
+  text-align: center;
+  margin: 20px 0;
+}
 
+.services-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  width: 100%;
+  padding: 0 20px;
+}
 </style>
