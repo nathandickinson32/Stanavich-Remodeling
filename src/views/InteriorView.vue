@@ -1,4 +1,4 @@
-<template>
+<template> 
   <div>
     <section class="content-section">
       <h2>Interior Services</h2>
@@ -47,7 +47,9 @@ export default {
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   width: 100%;
-  padding: 0 20px;
+  max-width: 1200px; 
+  margin: 0 auto; 
+  overflow-x: hidden; 
 }
 
 .service-item {
@@ -68,11 +70,5 @@ export default {
   transition: transform 0.3s ease;
 }
 
-.background-image:hover {
-  transform: scale(1.05);
-}
 
-.description {
-  flex: 1;
-}
 </style>
