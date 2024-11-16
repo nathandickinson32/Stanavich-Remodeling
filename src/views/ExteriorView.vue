@@ -62,7 +62,6 @@ export default {
   display: flex;
   gap: 10px;
   align-items: center;
-  padding: 10px;
   border: 1px solid #ddd;
   border-radius: 8px;
   background: #f9f9f9;

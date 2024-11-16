@@ -2,8 +2,12 @@
   <div class="service-item">
     <div 
       class="background-image" 
-      :style="{ backgroundImage: `url(${backgroundImage})`, transform: isScaled ? 'scale(1.55)' : 'scale(1)' }"
-      @click="toggleScale"  
+      :style="{
+        backgroundImage: `url(${backgroundImage})`,
+        transform: isScaled ? 'scale(1.9) translateX(70px)' : 'scale(1) translateX(0)', 
+        transition: 'transform 0.3s ease',  
+      }"
+      @click="toggleScale"
     ></div>
     <div class="description">
       <p>{{ description }}</p>
@@ -26,12 +30,12 @@ export default {
   },
   data() {
     return {
-      isScaled: false,  
+      isScaled: false, 
     };
   },
   methods: {
     toggleScale() {
-      this.isScaled = !this.isScaled;  
+      this.isScaled = !this.isScaled;
     },
   },
 };
@@ -42,6 +46,7 @@ export default {
   display: flex;
   gap: 10px;
   align-items: center;
+  justify-content: center; 
   max-width: 100%;
   height: 150px;
   padding: 10px;
@@ -55,11 +60,7 @@ export default {
   height: 100px;
   background-size: cover;
   background-position: center;
-  transition: transform 0.3s ease;
-}
-
-.background-image:hover, .background-image:active {
-  transform: scale(1.55);  
+  cursor: pointer; /* Change cursor to indicate clickable image */
 }
 
 .description {
