@@ -60,7 +60,7 @@ export default {
   height: 100px;
   background-size: cover;
   background-position: center;
-  cursor: pointer; /* Change cursor to indicate clickable image */
+  cursor: pointer; 
 }
 
 .description {
