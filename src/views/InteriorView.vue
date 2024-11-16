@@ -1,4 +1,4 @@
-<template> 
+<template>
   <div>
     <section class="content-section">
       <h2>Interior Services</h2>
@@ -11,6 +11,7 @@
         :key="index"
         :backgroundImage="item.backgroundImage"
         :description="item.description"
+        @toggleScale="toggleScale(index)"
       />
     </section>
   </div>
@@ -31,7 +32,13 @@ export default {
         { backgroundImage: './assets/images/remodel2.jpg', description: 'Description 2' },
         { backgroundImage: './assets/images/remodel3.jpg', description: 'Description 3' },
       ],
+      scaledIndex: null,  
     };
+  },
+  methods: {
+    toggleScale(index) {
+      this.scaledIndex = this.scaledIndex === index ? null : index;  
+    },
   },
 };
 </script>
@@ -47,9 +54,8 @@ export default {
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   width: 100%;
-  max-width: 1200px; 
-  margin: 0 auto; 
-  overflow-x: hidden; 
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .service-item {
@@ -68,5 +74,10 @@ export default {
   background-size: cover;
   background-position: center;
   transition: transform 0.3s ease;
+}
+
+.description {
+  flex: 1;
+  word-wrap: break-word;
 }
 </style>

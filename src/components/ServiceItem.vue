@@ -1,10 +1,13 @@
 <template>
   <div class="service-item">
-    <div class="background-image" :style="{backgroundImage: `url(${backgroundImage})`}"></div>
+    <div 
+      class="background-image" 
+      :style="{ backgroundImage: `url(${backgroundImage})`, transform: isScaled ? 'scale(1.55)' : 'scale(1)' }"
+      @click="toggleScale"  
+    ></div>
     <div class="description">
-        <p>{{ description }}</p>
+      <p>{{ description }}</p>
     </div>
-
   </div>
 </template>
 
@@ -14,14 +17,24 @@ export default {
   props: {
     backgroundImage: {
       type: String,
-      required: true
+      required: true,
     },
     description: {
       type: String,
-      required: true
+      required: true,
     },
-  }
-}
+  },
+  data() {
+    return {
+      isScaled: false,  
+    };
+  },
+  methods: {
+    toggleScale() {
+      this.isScaled = !this.isScaled;  
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -42,18 +55,15 @@ export default {
   height: 100px;
   background-size: cover;
   background-position: center;
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
 }
 
-.background-image:hover {
-  transform: scale(1.55);
-}
-.background-image:active {
-  transform: scale(1.55);
+.background-image:hover, .background-image:active {
+  transform: scale(1.55);  
 }
 
 .description {
   flex: 1;
-  word-wrap: break-word; 
+  word-wrap: break-word;
 }
 </style>
