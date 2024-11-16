@@ -20,7 +20,7 @@
 import ServiceItem from '../components/ServiceItem.vue';
 
 export default {
-  name: 'EnteriorPage',
+  name: 'ExteriorPage',
   components: {
     ServiceItem,
   },
