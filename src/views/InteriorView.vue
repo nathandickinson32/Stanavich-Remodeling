@@ -1,29 +1,18 @@
 <template>
-  <div>
-    <section class="content-section">
-      <h2>Interior Services</h2>
-      <p>Broad Description of interior services</p>
-    </section>
-
-    <section class="services-grid">
-      <service-item
-        v-for="(item, index) in interiorServiceItems"
-        :key="index"
-        :backgroundImage="item.backgroundImage"
-        :description="item.description"
-        @toggleScale="toggleScale(index)"
-      />
-    </section>
-  </div>
+  <service-view
+    title="Interior Services"
+    description="Broad Description of interior services"
+    :serviceItems="interiorServiceItems"
+  />
 </template>
 
 <script>
-import ServiceItem from '../components/ServiceItem.vue';
+import ServiceView from '../components/ServiceView.vue';
 
 export default {
   name: 'InteriorPage',
   components: {
-    ServiceItem,
+    ServiceView,
   },
   data() {
     return {
@@ -32,13 +21,7 @@ export default {
         { backgroundImage: './assets/images/remodel2.jpg', description: 'Description 2' },
         { backgroundImage: './assets/images/remodel3.jpg', description: 'Description 3' },
       ],
-      scaledIndex: null,  
     };
-  },
-  methods: {
-    toggleScale(index) {
-      this.scaledIndex = this.scaledIndex === index ? null : index;  
-    },
   },
 };
 </script>

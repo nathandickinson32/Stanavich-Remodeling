@@ -1,44 +1,27 @@
 <template>
-  <div>
-    <section class="content-section">
-      <h2>Exterior Services</h2>
-      <p>Broad Description of exterior services</p>
-    </section>
-
-    <section class="services-grid">
-      <service-item
-        v-for="(item, index) in exteriorServiceItems"
-        :key="index"
-        :backgroundImage="item.backgroundImage"
-        :description="item.description"
-        @toggleScale="toggleScale(index)"
-      />
-    </section>
-  </div>
+  <service-view
+    title="Exterior Services"
+    description="Broad Description of exterior services"
+    :serviceItems="exteriorServiceItems"
+  />
 </template>
 
 <script>
-import ServiceItem from '../components/ServiceItem.vue';
+import ServiceView from '../components/ServiceView.vue';
 
 export default {
   name: 'ExteriorPage',
   components: {
-    ServiceItem,
+    ServiceView,
   },
   data() {
     return {
       exteriorServiceItems: [
-        { backgroundImage: './assets/images/remodel7.jpg', description: 'Description 1' },
-        { backgroundImage: './assets/images/remodel8.jpg', description: 'Description 2' },
-        { backgroundImage: './assets/images/remodel14.jpg', description: 'Description 3' },
+        { backgroundImage: './assets/images/remodel1.jpg', description: 'Description 1' },
+        { backgroundImage: './assets/images/remodel2.jpg', description: 'Description 2' },
+        { backgroundImage: './assets/images/remodel3.jpg', description: 'Description 3' },
       ],
-      scaledIndex: null,  
     };
-  },
-  methods: {
-    toggleScale(index) {
-      this.scaledIndex = this.scaledIndex === index ? null : index;  
-    },
   },
 };
 </script>
