@@ -48,6 +48,9 @@ export default {
 .background-image:hover {
   transform: scale(1.55);
 }
+.background-image:active {
+  transform: scale(1.55);
+}
 
 .description {
   flex: 1;
