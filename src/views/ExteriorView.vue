@@ -62,11 +62,11 @@ export default {
   background: #f9f9f9;
 }
 
-.background-image {
+/* .background-image {
   width: 150px;
   height: 100px;
   background-size: cover;
   background-position: center;
   transition: transform 0.3s ease;
-}
+} */
 </style>

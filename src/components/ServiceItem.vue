@@ -1,12 +1,21 @@
 <template>
   <div class="service-item">
-    <div class="background-image" :style="{backgroundImage: `url(${backgroundImage})`}"></div>
+    <div 
+      class="background-image" 
+      :style="{ backgroundImage: `url(${backgroundImage})` }"
+      @touchstart="scaleImage(true)"
+      @touchend="scaleImage(false)"
+      @mouseenter="scaleImage(true)"
+      @mouseleave="scaleImage(false)"
+      ref="backgroundImage"
+    ></div>
     <div class="description">
-        <p>{{ description }}</p>
+      <p>{{ description }}</p>
     </div>
-
   </div>
 </template>
+
+
 
 <script>
 export default {
@@ -14,15 +23,23 @@ export default {
   props: {
     backgroundImage: {
       type: String,
-      required: true
+      required: true,
     },
     description: {
       type: String,
-      required: true
+      required: true,
     },
-  }
-}
+  },
+  methods: {
+    scaleImage(isScaling) {
+      const imageElement = this.$refs.backgroundImage;
+      imageElement.style.transform = isScaling ? 'scale(1.55)' : 'scale(1)';
+    },
+  },
+};
 </script>
+
+
 
 <style scoped>
 .service-item {
@@ -45,15 +62,9 @@ export default {
   transition: transform 0.5s ease;
 }
 
-.background-image:hover {
-  transform: scale(1.55);
-}
-.background-image:active {
-  transform: scale(1.55);
-}
-
 .description {
   flex: 1;
   word-wrap: break-word; 
 }
 </style>
+
