@@ -7,7 +7,7 @@
 
     <section class="services-grid">
       <service-item
-        v-for="(item, index) in interiorServiceItems"
+        v-for="(item, index) in exteriorServiceItems"
         :key="index"
         :backgroundImage="item.backgroundImage"
         :description="item.description"
@@ -20,13 +20,13 @@
 import ServiceItem from '../components/ServiceItem.vue';
 
 export default {
-  name: 'InteriorPage',
+  name: 'EnteriorPage',
   components: {
     ServiceItem,
   },
   data() {
     return {
-      interiorServiceItems: [
+      exteriorServiceItems: [
         { backgroundImage: './assets/images/remodel7.jpg', description: 'Description 1' },
         { backgroundImage: './assets/images/remodel8.jpg', description: 'Description 2' },
         { backgroundImage: './assets/images/remodel14.jpg', description: 'Description 3' },
@@ -62,11 +62,11 @@ export default {
   background: #f9f9f9;
 }
 
-/* .background-image {
+.background-image {
   width: 150px;
   height: 100px;
   background-size: cover;
   background-position: center;
   transition: transform 0.3s ease;
-} */
+}
 </style>

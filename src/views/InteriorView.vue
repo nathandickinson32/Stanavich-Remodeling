@@ -69,6 +69,4 @@ export default {
   background-position: center;
   transition: transform 0.3s ease;
 }
-
-
 </style>
