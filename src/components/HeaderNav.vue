@@ -5,8 +5,6 @@
         <li>
           <router-link class="home-btn" to="/Stanavich-Remodeling" @click="closeMenu">Home</router-link><br />
           <router-link class="gallery-btn" to="/Stanavich-Remodeling/about" @click="closeMenu">About</router-link><br />
-          <router-link class="interior-btn" to="/Stanavich-Remodeling/interior" @click="closeMenu">Interior</router-link><br />
-          <router-link class="gallery-btn" to="/Stanavich-Remodeling/exterior" @click="closeMenu">Exterior</router-link><br />
           <router-link class="gallery-btn" to="/Stanavich-Remodeling/gallery" @click="closeMenu">Gallery</router-link>
         </li>
       </ul>
