@@ -1,3 +1,15 @@
+<script>
+import HeaderNav from './components/HeaderNav.vue';
+import FooterNav from './components/FooterNav.vue';
+
+export default {
+  components: {
+    HeaderNav,
+    FooterNav
+  }
+}
+</script>
+
 <template>
   <div class="app-container">
     <div class="header-content">
@@ -13,21 +25,6 @@
     </div>
   </div>
 </template>
-
-
-<script>
-import HeaderNav from './components/HeaderNav.vue';
-import FooterNav from './components/FooterNav.vue';
-
-export default {
-  components: {
-    HeaderNav,
-    FooterNav
-  }
-}
-</script>
-
-
 
 <style scoped>
 .app-container {
