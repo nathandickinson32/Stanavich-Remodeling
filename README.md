@@ -1,4 +1,5 @@
 Stanavich-Remodeling
+
 Welcome to Stanavich-Remodeling's portfolio website! This site highlights Charles Stanavich's skills, showcases his work, and provides an easy way for potential clients and collaborators to connect with him. As a one-man operation, He take pride in every project he undertakes, and this website is the perfect place to showcase his passion for home remodeling.
 
 Features
